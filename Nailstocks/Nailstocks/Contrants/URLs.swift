@@ -7,4 +7,4 @@
 
 import Foundation
 
-let shortQuote = "https://financialmodelingprep.com/api/v3/cash-flow-statement/"
+let shortQuote = "https://financialmodelingprep.com/api/v3/enterprise-values/"

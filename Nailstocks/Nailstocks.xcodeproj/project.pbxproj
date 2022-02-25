@@ -16,6 +16,7 @@
 		FC041E9227C2C90B000D1FCB /* StockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC041E9127C2C90B000D1FCB /* StockViewController.swift */; };
 		FC041E9527C2CB64000D1FCB /* URLs.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC041E9427C2CB64000D1FCB /* URLs.swift */; };
 		FC041E9727C2CB9A000D1FCB /* APIKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC041E9627C2CB9A000D1FCB /* APIKeys.swift */; };
+		FCFAD9E927C98AA000358CE1 /* EnterpriseValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFAD9E827C98AA000358CE1 /* EnterpriseValue.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		FC041E9127C2C90B000D1FCB /* StockViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockViewController.swift; sourceTree = "<group>"; };
 		FC041E9427C2CB64000D1FCB /* URLs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLs.swift; sourceTree = "<group>"; };
 		FC041E9627C2CB9A000D1FCB /* APIKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKeys.swift; sourceTree = "<group>"; };
+		FCFAD9E827C98AA000358CE1 /* EnterpriseValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterpriseValue.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +118,7 @@
 		FC041E9027C2C5C9000D1FCB /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				FCFAD9E827C98AA000358CE1 /* EnterpriseValue.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -245,6 +248,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FC041E7B27C2C576000D1FCB /* AppDelegate.swift in Sources */,
+				FCFAD9E927C98AA000358CE1 /* EnterpriseValue.swift in Sources */,
 				FC041E9727C2CB9A000D1FCB /* APIKeys.swift in Sources */,
 				FC041E7D27C2C576000D1FCB /* SceneDelegate.swift in Sources */,
 				FC041E9227C2C90B000D1FCB /* StockViewController.swift in Sources */,

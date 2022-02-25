@@ -26,13 +26,18 @@ class StockViewController: UIViewController {
  
     @IBAction func getStockPrice(_ sender: Any) {
         
-        let symbol = txtStock.text!
         
-        let url = "\(shortQuote)\(symbol)?apikey=\(apiKey)"
+        guard let symbol = txtStock.text else{return}
+        
+        
+        
+        let url = "\(shortQuote)\(symbol.uppercased())?apikey=\(apiKey)"
         
         print(url)
         
+        SwiftSpinner.show("Getting Stock Value and number of share for \(symbol)")
         AF.request(url).responseJSON { reponse in
+            SwiftSpinner.hide(nil)
                    if reponse.error != nil {
                        print(reponse.error!)
                        return
@@ -41,7 +46,16 @@ class StockViewController: UIViewController {
                    
                    let stocks = JSON(reponse.data!).array
                    
+            guard let stock = stocks!.first else {return}
+                   
                    print(stocks)
+                   let quote = EnterpriseValue()
+            quote.symbol = stock["symbol"].stringValue
+            quote.numberOfShares = stock["numberOfShares"].intValue
+            quote.stockPrice = stock["stockPrice"].floatValue
+            
+            self.lblStockPrice.text = "\(quote.symbol): \(quote.stockPrice) $ - \(quote.numberOfShares) shares"
+
         }
     }
 }
