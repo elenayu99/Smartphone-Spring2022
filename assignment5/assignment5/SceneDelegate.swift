@@ -1,8 +1,8 @@
 //
 //  SceneDelegate.swift
-//  Nailstocks
+//  assignment5
 //
-//  Created by irene on 2022/2/20.
+//  Created by yi yu on 2/25/22.
 //
 
 import UIKit
