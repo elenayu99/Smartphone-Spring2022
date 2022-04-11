@@ -33,25 +33,18 @@ class ViewController: UIViewController,SendStockDelegate {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         stocksModel = initializeStocks()
+        getStockData("aapl")
+            .done { quote in
+                self.lblName.text = quote.companyName
+                self.lblSymbol.text = quote.symbol
+                self.lblPrice.text = "price : \(quote.price) $"
+                self.lblHigh.text = "Day high : \(quote.dayHight) $"
+                self.lblLow.text = "Day low : \(quote.dayLow) $"
+            }
+            .catch { error in
+            print(error.localizedDescription)
+            }
     }
-    
-    
-//    @IBAction func getStockClick(_ sender: Any) {
-        
-        
- //       getStockData("aapl")
-//            .done { quote in
- //               self.lblName.text = quote.companyName
- //               self.lblSymbol.text = quote.symbol
-  //              self.lblPrice.text = "price : \(quote.price) $"
-  //              self.lblHigh.text = "Day high : \(quote.dayHight) $"
-  //              self.lblLow.text = "Day low : \(quote.dayLow) $"
- //           }
- //           .catch { error in
- //               print(error.localizedDescription)
- //           }
- //   }
-
     
     
     
